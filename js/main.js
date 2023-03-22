@@ -1,11 +1,25 @@
-const subtrair = document.querySelector("#subtrair");
-const somar = document.querySelector("#somar");
-const braco = document.querySelector("#braco");
+const controle = document.querySelectorAll("[data-controle]");
 
-somar.addEventListener("click", (evento) => { //=> mesma coisa que escrever uma função anonima (função de seta)
-    braco.value = parseInt(braco.value) + 1;
-} );
+controle.forEach( (elemento) => {
+    elemento.addEventListener("click", (evento) => {
+        manipulaDados(evento.target.dataset.controle, evento.target.parentNode)
+       
+    })
+})  
 
-subtrair.addEventListener("click", (evento) => { 
-    braco.value = parseInt(braco.value) - 1;
-} );
+function manipulaDados(operacao, controle) {
+    const peca = controle.querySelector("[data-contador]");
+
+    if(operacao === "-") {
+        peca.value = parseInt(peca.value) - 1;
+    }else {
+        peca.value = parseInt(peca.value) + 1;
+    }
+}
+
+
+
+
+
+
+//somar.addEventListener("click", () => {manipulaDados("somar")});=> mesma coisa que escrever uma função anonima (função de seta)
