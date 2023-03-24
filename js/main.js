@@ -4,25 +4,25 @@ const pecas = {
     "bracos": {
         "forca": 29,
         "poder": 35,
-        "energia": -21,
+        "energia": -13,
         "velocidade": -5
     },
     "blindagem": {
         "forca": 41,
         "poder": 20,
         "energia": 0,
-        "velocidade": -20
+        "velocidade": -8
     },
     "nucleos":{
         "forca": 0,
         "poder": 7,
         "energia": 48,
-        "velocidade": -24
+        "velocidade": -9
     },
     "pernas":{
         "forca": 27,
         "poder": 21,
-        "energia": -32,
+        "energia": -15,
         "velocidade": 42
     },
     "foguetes":{
